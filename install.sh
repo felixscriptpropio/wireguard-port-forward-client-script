@@ -79,6 +79,8 @@ services:
       - "7777:7777/tcp"
       - "8888:8888/tcp"
       - "9090:9090/tcp"
+      - "9999:9999/tcp"
+      - "800:800/tcp"
 EOF
 
 # Restrict permissions
@@ -100,7 +102,7 @@ EXT_IFACE="eth0"
 VPN_CLIENT_IP="10.8.0.2"
 
 # List of ports to forward
-PORTS=(5050 5051 5052 5053 5054 5055 6666 7777 8888 9090)
+PORTS=(5050 5051 5052 5053 5054 5055 6666 7777 8888 9090 9999 800)
 
 # Loop through each port and add iptables rules inside the container
 for PORT in "${PORTS[@]}"; do
