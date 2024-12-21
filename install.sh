@@ -81,6 +81,7 @@ services:
       - "9090:9090/tcp"
       - "9999:9999/tcp"
       - "800:800/tcp"
+      - "8000:8000/tcp"
 EOF
 
 # Restrict permissions
