@@ -68,11 +68,11 @@ services:
     ports:
       - "51820:51820/udp"
       - "51821:51821/tcp"
-      - "5053:5053/tcp"
-      - "5054:5054/tcp"
-      - "8888:8888/tcp"
-      - "9090:9090/tcp"
-      - "800:800/tcp"
+      - "2405:2405/tcp"
+      - "2505:2505/tcp"
+      - "2605:2605/tcp"
+      - "2705:2705/tcp"
+      - "2805:2805/tcp"
       - "9999:9999/tcp"
 EOF
 
@@ -95,7 +95,7 @@ EXT_IFACE="eth0"
 VPN_CLIENT_IP="10.8.0.2"
 
 # List of ports to forward
-PORTS=(5053 5054 8888 9090 9999 800)
+PORTS=(2405 2505 2605 2705 2805 9999)
 
 # Loop through each port and add iptables rules inside the container
 for PORT in "${PORTS[@]}"; do
