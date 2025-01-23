@@ -68,12 +68,20 @@ services:
     ports:
       - "51820:51820/udp"
       - "51821:51821/tcp"
-      - "2405:2405/tcp"
-      - "2505:2505/tcp"
-      - "2605:2605/tcp"
-      - "2705:2705/tcp"
-      - "2805:2805/tcp"
+      - "800:800/tcp"
+      - "900:900/tcp"
+      - "8888:8888/tcp"
       - "9999:9999/tcp"
+      - "5500:5500/tcp"
+      - "5053:5054/tcp"
+      - "1000:1000/tcp"
+      - "2000:2000/tcp"
+      - "3000:3000/tcp"
+      - "4000:4000/tcp"
+      - "5000:5000/tcp"
+      - "9090:9090/tcp"
+      - "1970:1970/tcp"
+      - "2024:2024/tcp"
 EOF
 
 # Restrict permissions
@@ -95,7 +103,7 @@ EXT_IFACE="eth0"
 VPN_CLIENT_IP="10.8.0.2"
 
 # List of ports to forward
-PORTS=(2405 2505 2605 2705 2805 9999)
+PORTS=(800 900 8888 9999 5500 5053 5054 1000 2000 3000 4000 5000 9090 1970 2024)
 
 # Loop through each port and add iptables rules inside the container
 for PORT in "${PORTS[@]}"; do
