@@ -80,6 +80,7 @@ services:
       - "3000:3000/tcp"
       - "4000:4000/tcp"
       - "5000:5000/tcp"
+      - "8000:8000/tcp"
       - "9090:9090/tcp"
       - "1970:1970/tcp"
       - "2024:2024/tcp"
@@ -104,7 +105,7 @@ EXT_IFACE="eth0"
 VPN_CLIENT_IP="10.8.0.2"
 
 # List of ports to forward
-PORTS=(800 900 8888 9999 5500 5053 5054 1000 2000 3000 4000 5000 9090 1970 2024)
+PORTS=(800 900 8888 9999 5500 5053 5054 1000 2000 3000 4000 5000 8000 9090 1970 2024)
 
 # Loop through each port and add iptables rules inside the container
 for PORT in "${PORTS[@]}"; do
